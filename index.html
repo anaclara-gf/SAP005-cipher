@@ -5,10 +5,46 @@
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
+    <div id=root>
+      <div id="encode">
+        <h1>Criptografe sua mensagem:</h1>
+  
+        <form>
+          <label for="offset-encode">Offset desejado</label>
+          <input type="number" id="offset-encode" class="input-padrao" placeholder="Digite o número do offset desejado">
+          
+          <label for="mensagem-encode" id="mensagem-titulo">Mensagem</label>
+          <textarea id="mensagem-encode" class="input-padrao" placeholder="Digite a mensagem a ser criptografada aqui"></textarea>
+          
+          <button id="enviar-encode">Criptografar Mensagem</button>
+        </form>
+  
+        <h2>Resposta</h2>
+        <p id="resposta-encode"></p>
+  
+      </div>
+  
+      <div id="decode">
+        <h3>Descubre sua mensagem:</h3>
+  
+        <form>
+          <label for="offset-decode">Offset desejado</label>
+          <input type="number" id="offset-decode" class="input-padrao" placeholder="Digite o número do offset desejado">
+          
+          <label for="mensagem-decode" id="mensagem-titulo">Mensagem</label>
+          <textarea id="mensagem-decode" class="input-padrao" placeholder="Digite a mensagem a ser descoberta aqui"></textarea>
+          
+          <button id="enviar-decode">Descobrir mensagem!</button>
+        </form>
+  
+        <h4>Resposta</h4>
+        <p id="resposta-decode"></p>
+  
+      </div>
     </div>
+    
     <script src="index.js" type="module"></script>
   </body>
 </html>

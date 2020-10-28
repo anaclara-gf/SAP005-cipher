@@ -1,0 +1,22 @@
+label {
+    display: block;
+}
+#offset {
+    width: 400px;
+}
+
+#mensagem-titulo {
+    margin-top: 20px;
+}
+
+#mensagem {
+    width: 800px;
+    height: 200px;
+}
+
+.enviar {
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+}
+
