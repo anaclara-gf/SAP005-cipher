@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
@@ -7,40 +7,41 @@
   </head>
 
   <body>
-    <div id=root>
+    <div id="root">
+      <h1>Coluna da Agonia</h1>
+      <p>A coluna da agonia foi uma forma de amantes se comunicarem na Inglaterra Vitoriana nos jornais. Os amantes mandavam mensagem enigmáticas e, por vezes, cifradas</p>
+      
       <div id="encode">
-        <h1>Criptografe sua mensagem:</h1>
+        <p>Criptografe sua mensagem:</p>
   
         <form>
-          <label for="offset-encode">Offset desejado</label>
-          <input type="number" id="offset-encode" class="input-padrao" placeholder="Digite o número do offset desejado">
+          <label for="offset-encode">Offset:</label>
+          <input type="number" id="offset-encode" class="input-padrao" placeholder="Digite o offset">
           
-          <label for="mensagem-encode" id="mensagem-titulo">Mensagem</label>
-          <textarea id="mensagem-encode" class="input-padrao" placeholder="Digite a mensagem a ser criptografada aqui"></textarea>
+          <label for="message-encode" id="message-title-encode">Mensagem:</label>
+          <textarea id="message-encode" class="input-padrao" placeholder="Digite a mensagem a ser criptografada aqui"></textarea>
           
-          <button id="enviar-encode">Criptografar Mensagem</button>
+          <button id="send-encode">Criptografar Mensagem</button>
         </form>
   
-        <h2>Resposta</h2>
-        <p id="resposta-encode"></p>
+        <p id="answer-encode"></p>
   
       </div>
   
       <div id="decode">
-        <h3>Descubre sua mensagem:</h3>
+        <p>Descubre sua mensagem:</p>
   
         <form>
-          <label for="offset-decode">Offset desejado</label>
-          <input type="number" id="offset-decode" class="input-padrao" placeholder="Digite o número do offset desejado">
+          <label for="offset-decode">Offset:</label>
+          <input type="number" id="offset-decode" class="input-padrao" min="1" placeholder="Digite o offset">
           
-          <label for="mensagem-decode" id="mensagem-titulo">Mensagem</label>
-          <textarea id="mensagem-decode" class="input-padrao" placeholder="Digite a mensagem a ser descoberta aqui"></textarea>
+          <label for="message-decode" id="message-title-decode">Mensagem</label>
+          <textarea id="message-decode" class="input-padrao" placeholder="Digite a mensagem a ser descoberta aqui"></textarea>
           
-          <button id="enviar-decode">Descobrir mensagem!</button>
+          <button id="send-decode">Descobrir mensagem!</button>
         </form>
   
-        <h4>Resposta</h4>
-        <p id="resposta-decode"></p>
+        <p id="answer-decode"></p>
   
       </div>
     </div>
