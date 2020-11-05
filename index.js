@@ -1,37 +1,58 @@
 import cipher from './cipher.js';
 
-let buttonEncode = document.querySelector('#send-encode');
-
 function encode(event){
-    let offset = document.getElementById('offset-encode');
-    let message = document.getElementById('message-encode');
+    let password = document.getElementById('offset-encode');
+    let offset;
+    if(Number.isNaN(parseInt(password.value))){
+        offset = password.value.length;
+    }else {
+        offset = parseInt(password.value);
+    }
+    let message = document.getElementById('message-encode').value;
     let answerHTML = document.querySelector('#answer-encode');
     try{
-        let answer = cipher.encode(parseInt(offset.value),message.value);
-        answerHTML.textContent = `Mensagem criptografada:\n${answer}`;
+        let answer = cipher.encode(offset,message);
+        answerHTML.textContent = answer;
     }catch(error){
         alert(error);
     }
 
     event.preventDefault()
 }
-
-buttonEncode.addEventListener("click",encode);
-
-let buttonDecode = document.querySelector('#send-decode');
 
 function decode(event){
-    let offset = document.getElementById('offset-decode');
-    let message = document.getElementById('message-decode');
+    let password = document.getElementById('offset-decode');
+    //para a senha funcionar com números e palavras:
+    let offset;
+    if(Number.isNaN(parseInt(password.value))){
+        offset = password.value.length;
+    }else {
+        offset = parseInt(password.value);
+    }
+
+    let message = document.getElementById('message-decode').value;
     let answerHTML = document.querySelector('#answer-decode');
     try{
-        let answer = cipher.decode(parseInt(offset.value),message.value);
-        answerHTML.textContent = "Mensagem descriptografada: " + answer;
+        let answer = cipher.decode(offset,message);
+        answerHTML.textContent = answer;
     }catch(error){
         alert(error);
     }
 
+    //para funcionar o form no html:
     event.preventDefault()
 }
 
-buttonDecode.addEventListener("click",decode);
+
+let buttonEncode = document.querySelector('#send-encode');
+
+//para funcionar em todas as páginas (só vai acionar o button caso ele exista na página):
+if(buttonEncode !== null){
+    buttonEncode.addEventListener("click",encode);
+}
+    
+let buttonDecode = document.querySelector('#send-decode');
+if(buttonDecode !== null){
+    buttonDecode.addEventListener("click",decode);
+}
+

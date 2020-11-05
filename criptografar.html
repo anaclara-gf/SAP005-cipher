@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Roboto&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="root">
+    <header>
+      <h1 id="titulo-pagina">Coluna da Agonia</h1>
+      <hr>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Introdução</a>
+          </li>
+          <li>
+            <a href="criptografar.html">Criptografar</a>
+          </li>
+          <li>
+            <a href="descriptografar.html">Descriptografar</a>
+          </li>
+        </ul>
+      </nav>
+      <hr>
+    </header>
+
+    <main>
+        <div id="encode">
+          <p class="titulo-form">Criptografe sua mensagem:</p>
+    
+          <form class="formulario">
+            <label class="senha" for="offset-decode">Senha</label>
+              <div class="tooltip">&#9432;
+                <span class="tooltiptext">Você pode escolher um número ou uma palavra<br>Caso escolha palavra o deslocamento será o número de caracteres</span>
+              </div>
+            <input type="text" id="offset-encode" class="input-padrao" placeholder="Digite a senha">
+            
+            <label for="message-encode" id="message-title-encode">Mensagem:</label>
+            <textarea id="message-encode" class="input-padrao" placeholder="Digite a mensagem a ser criptografada aqui"></textarea>
+            
+            <button id="send-encode">Criptografar Mensagem</button>
+          </form>
+    
+          <p class="answer" id="answer-encode"></p>
+        </div>
+
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Cole%20seu%20texto%20criptografado%20aqui" data-size="large" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+
+    </main>
+
+    <footer>
+        <p class="footer">Essa página é uma criação de Ana Clara Garcia Farah para o desafio da Cifra de César proposto pela Laboratória.</p>
+    </footer>
+    </div>
+
+    <script src="index.js" type="module"></script>
+
+  </body>
+</html>

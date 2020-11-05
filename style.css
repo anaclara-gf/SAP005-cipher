@@ -1,22 +1,265 @@
-label {
+@font-face {
+    font-family: "Old London";
+    src: url('OldLondon.ttf') format('truetype'); 
+}
+
+body {
+    background-image: url(background.jpg);
+    margin: 0;
+}
+
+#root {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    width: 1000px;
     display: block;
-}
-#offset {
-    width: 400px;
-}
-
-#mensagem-titulo {
-    margin-top: 20px;
+    margin: 0 auto;
+    flex-shrink: 0;
 }
 
-#mensagem {
-    width: 800px;
-    height: 200px;
-}
-
-.enviar {
-    margin-top: 20px;
+#titulo-pagina {
+    font-family: "Old London";
+    font-size: 4.5em;
     text-align: center;
-    display: block;
+    margin: 20px 0;
 }
 
+header hr {
+    color: gray;
+    border-top: medium double;
+    
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    padding-inline-start: 0px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+}
+
+.img-intro {
+    width:750px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.legenda-um {
+    width: 600px;
+    font-size: 0.7em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 2px auto;
+}
+
+.subtitulo {
+    width: 750px;
+    font-size: 1.4em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin: 30px auto 5px auto;
+}
+
+.texto {
+    width: 750px;
+    font-family: 'Lora', serif;
+    text-align: justify;
+    margin: 5px auto 20px auto;
+}
+
+.citacao {
+    padding: 10px 20px;
+    border: thin solid;
+    border-color: gray;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.citacao-texto {
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    margin: 10px auto;
+    width: 500px;
+    font-size: 0.9em;
+}
+
+.referencia {
+    width: 500px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: gray;
+    font-size: 0.8em;
+    margin: 0 0 15px 0;
+}
+
+.coluna-agonia-moderna {
+    width:500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.legenda-dois {
+    width: 750px;
+    font-size: 0.7em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 2px auto;
+}
+
+.botoes {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.quero-fazer-msg {
+    margin: 0 15px;
+    line-height: 40px;
+    font-family: 'Roboto', sans-serif;
+    width: 300px;
+    height: 40px;
+    background-color: black;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    vertical-align: text-bottom;
+}
+
+.quero-fazer-msg:hover {
+    background-color: grey;
+}
+
+#encode, #decode {
+    width: 750px;
+    margin: 0 auto;
+}
+
+.titulo-form {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px auto 5px auto;
+    width: 750px;
+}
+
+form {
+    text-align: center;
+    margin: 0 auto;
+    width: 750px;
+}
+
+label {
+    display: inline-flex;
+    margin: 20px auto 0 auto;
+    font-family: 'Lora', serif;
+    font-size: 1.1em;
+}
+
+input {
+    display: block;
+    margin: 5px auto;
+    font-family: 'Lora', serif;
+    background-color: #f9f0e1;
+    font-size: 0.9em;
+}
+
+textarea {
+    resize: none;
+    width: 700px;
+    height: 200px;
+    display: block;
+    margin: 5px auto;
+    font-family: 'Lora', serif;
+    text-align: center;
+    background-color: #f9f0e1;
+    font-size: 0.9em;
+}
+
+button {
+    display: block;
+    margin: 20px auto 0 auto;
+    font-family: 'Roboto', sans-serif;
+    width: 250px;
+    height: 30px;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.answer {
+    text-align: center;
+    font-family: 'Lora', serif;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    cursor: pointer;
+  }
+  
+  .tooltip .tooltiptext {
+    font-family: 'Lora', serif;
+    font-size: 0.8em;
+    visibility: hidden;
+    width: 180px;
+    background-color: #f9f0e1;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    margin: 0 5px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .footer {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 15px 0 15px 0;
+    border: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    background-color: white; opacity: 0.4;
+}

@@ -2,50 +2,61 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Roboto&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <div id="root">
-      <h1>Coluna da Agonia</h1>
-      <p>A coluna da agonia foi uma forma de amantes se comunicarem na Inglaterra Vitoriana nos jornais. Os amantes mandavam mensagem enigmáticas e, por vezes, cifradas</p>
+    <header>
+      <h1 id="titulo-pagina">Coluna da Agonia</h1>
+      <hr>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Introdução</a>
+          </li>
+          <li>
+            <a href="criptografar.html">Criptografar</a>
+          </li>
+          <li>
+            <a href="descriptografar.html">Descriptografar</a>
+          </li>
+        </ul>
+      </nav>
+      <hr>
+    </header>
+
+    <main>
+      <img class="img-intro" src="imagem-intro.png">
+      <p class="legenda-um">Da esquerda para a direita, vemos: o busto do Imperador Júlio César; as capas dos jornais londrinos "The Standard" e "The Times" no século XIX; uma fotografia da Rainha Vitória em 1887; a roda de decifração da Cifra de César; a capa do <em>"The Ladies' Book of Etiquette”</em> e foto de um casal inglês do século XIX.</p>
+      <p class="subtitulo">O que era a Coluna da Agonia?</p>
+      <p class="texto">A Coluna da Agonia era uma seção do jornal para anúncios pessoais criada pelo jornal The Times (Londres) durante a era Vitoriana. A era Vitoriana foi o período do reinado da rainha Vitória, no Reino Unido. Compreendida de junho de 1838 a janeiro de 1901 (meados do século XIX), esta era foi marcada por rígidos costumes e moralismo social e sexual. Nessa época, por exemplo, não era aconselhável a comunicação por carta entre namorados, por isso os amantes se comunicavam por meio da Coluna da Agonia no jornal, usando apelidos, abreviações e, muitas vezes, criptografia. Uma das formas de criptografia utilizada foi a Cifra de César.</p>
+      <div class="citacao">
+      <p class="citacao-texto">“É aconselhável a uma mulher que evite se corresponder com cavalheiros por cartas, principalmente se você é jovem. Ainda sim, se for um amigo de longa data e seus pais ou marido permitirem, é prudente que não se recuse a enviar-lhe uma resposta. Porém escreva a carta como se ela fosse impressa nos jornais, de modo que não lhe cause aborrecimentos. Se for um amigo muito próximo, tome cuidado com suas expressões para que não se tornem veementes e evite assuntos confidenciais. Quando ele começa a insistir em perguntar sobre assuntos particulares, é hora de parar de se corresponder com ele.”</p>
+      <p class="referencia"><em>"The Ladies' Book of Etiquette”</em><br/>(O livro de etiqueta para damas), Florence Hartley (1860)</p>
+      </div>
+      <p class="subtitulo">O que é a cifra de César?</p>
+      <p class="texto">Um tipo de cifra de substituição na qual cada letra de um texto a ser criptografado é substituída por outra letra, presente no alfabeto porém deslocada um certo número de posições. Isso significa que para ser possível criptografar uma mensagem pela Cifra de César, você deve escolher um número de deslocamento do alfabeto: por exemplo, se você escolher o deslocamento 3, todas as letras “A” da sua mensagem vão virar “D”, os “B” vão virar “E”, os “C” vão virar “F” e assim por diante.</p>
+      <p class="subtitulo">O desafio aqui é criar uma Coluna da Agonia moderna!</p>
+      <p class="texto">Primeiro, você vai escrever uma mensagem para alguém próximo de você, pode ser para um amigue, alguém da família ou para um crush, criptografá-la e colocar na sua timeline do Twitter ou do Facebook. Depois, você vai dar a senha para descriptografar (e o link desta página) para quem você quiser que saiba qual é a mensagem, assim ninguém além de vocês vai saber o que está escrito.</p>
+      <img class="coluna-agonia-moderna" src="facebook.png">
+      <p class="legenda-dois">Esse post contém a mensagem "Eu te amo para sempre!" criptografada com um deslocamento 31.</p>
       
-      <div id="encode">
-        <p>Criptografe sua mensagem:</p>
-  
-        <form>
-          <label for="offset-encode">Offset:</label>
-          <input type="number" id="offset-encode" class="input-padrao" placeholder="Digite o offset">
-          
-          <label for="message-encode" id="message-title-encode">Mensagem:</label>
-          <textarea id="message-encode" class="input-padrao" placeholder="Digite a mensagem a ser criptografada aqui"></textarea>
-          
-          <button id="send-encode">Criptografar Mensagem</button>
-        </form>
-  
-        <p id="answer-encode"></p>
-  
+      <div class="botoes">
+        <a class="quero-fazer-msg" href="criptografar.html">Quero criptografar uma mensagem!</a>
+        <a class="quero-fazer-msg" href="descriptografar.html">Quero descriptografar uma mensagem!</a>
       </div>
-  
-      <div id="decode">
-        <p>Descubre sua mensagem:</p>
-  
-        <form>
-          <label for="offset-decode">Offset:</label>
-          <input type="number" id="offset-decode" class="input-padrao" min="1" placeholder="Digite o offset">
-          
-          <label for="message-decode" id="message-title-decode">Mensagem</label>
-          <textarea id="message-decode" class="input-padrao" placeholder="Digite a mensagem a ser descoberta aqui"></textarea>
-          
-          <button id="send-decode">Descobrir mensagem!</button>
-        </form>
-  
-        <p id="answer-decode"></p>
-  
-      </div>
+    </main>
+
+    <footer>
+      <p class="footer">Essa página é uma criação de Ana Clara Garcia Farah para o desafio da Cifra de César proposto pela Laboratória.</p>
+    </footer>
     </div>
-    
+
     <script src="index.js" type="module"></script>
+  
   </body>
 </html>
