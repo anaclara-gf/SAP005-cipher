@@ -40,6 +40,19 @@ describe('cipher', () => {
     it('should return " !@" for " !@"', () => {
       expect(cipher.encode(33, ' !@')).toBe(' !@');
     });
+
+    //Teste para offset negativo com letras maiúsculas 
+
+    it('should return "TUVWXYZABCDEFGHIJKLMNOPQRS" for "ABCDEFGHIJKLMNOPQRSTUVWXYZ" with offset -33', () => {
+      expect(cipher.encode(-33, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toBe('TUVWXYZABCDEFGHIJKLMNOPQRS');
+    });
+
+    //Teste para offset negativo com letras minúsculas 
+
+    it('should return "tuvwxyzabcdefghijklmnopqrs" for "abcdefghijklmnopqrstuvwxyz" with offset -33', () => {
+      expect(cipher.encode(-33, 'abcdefghijklmnopqrstuvwxyz')).toBe('tuvwxyzabcdefghijklmnopqrs');
+    });
+
   });
 
   describe('cipher.decode', () => {
@@ -73,6 +86,18 @@ describe('cipher', () => {
   
     it('should return " !@" para " !@"', () => {
       expect(cipher.decode(33, ' !@')).toBe(' !@');
+    });
+
+    //Teste para offset negativo com letras maiúsculas 
+
+    it('should return "ABCDEFGHIJKLMNOPQRSTUVWXYZ" for "TUVWXYZABCDEFGHIJKLMNOPQRS" with offset -33', () => {
+      expect(cipher.decode(-33, 'TUVWXYZABCDEFGHIJKLMNOPQRS')).toBe('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    });
+
+    //Teste para offset negativo com letras minúsculas 
+    
+    it('should return "abcdefghijklmnopqrstuvwxyz" for "tuvwxyzabcdefghijklmnopqrs" with offset -33', () => {
+      expect(cipher.decode(-33, 'tuvwxyzabcdefghijklmnopqrs')).toBe('abcdefghijklmnopqrstuvwxyz');
     });
   });
 
