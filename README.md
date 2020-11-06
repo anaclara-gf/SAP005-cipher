@@ -12,7 +12,7 @@ A aplicação deste projeto tem como tema a Coluna da Agonia. Este tema foi base
 
 No filme, produção original Netflix, a personagem principal, que se chama Enola Holmes, comunica-se com a sua mãe por meio de mensagens cifradas no jornal. Uma das cifras utilizadas por elas é uma derivação da Cifra de César. O vídeo publicado no Facebook explica que essa forma de comunicação utilizada no filme é baseada em fatos reais. Isso porquê, aa era Vitoriana Inglesa, as regras de conduta não permitiam que os namorados se comunicassem por meio de cartas, então, muitas vezes, esses amantes recorriam a uma coluna de anúncios pessoais no jornal, chamada de Coluna da Agonia. 
 
-[(capa-video.png)](https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fnetflixbrasil%2Fvideos%2F856699371737164%2F&show_text=0&width=560)
+[![Vídeo Netflix](src/capa-video.PNG)](https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fnetflixbrasil%2Fvideos%2F856699371737164%2F&show_text=0&width=560)
 
 ## 3. Processo e decisões de desenho
 
