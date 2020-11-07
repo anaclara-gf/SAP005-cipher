@@ -3,6 +3,9 @@ import cipher from './cipher.js';
 function encode(event){
     let password = document.getElementById('offset-encode').value;
     let offset;
+    if(password === "" || message === ""){
+        return false;
+    }
     if(Number.isNaN(parseInt(password))){
         offset = password.length;
     }else {
@@ -22,8 +25,12 @@ function encode(event){
 
 function decode(event){
     let password = document.getElementById('offset-decode').value;
-    //para a senha funcionar com números e palavras:
     let offset;
+    //para confirmar a validação do "required" no html
+    if(password === "" || message === ""){
+        return false;
+    }
+    //para a senha funcionar com números e palavras:
     if(Number.isNaN(parseInt(password))){
         offset = password.length;
     }else {
