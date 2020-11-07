@@ -1,12 +1,12 @@
 import cipher from './cipher.js';
 
 function encode(event){
-    let password = document.getElementById('offset-encode');
+    let password = document.getElementById('offset-encode').value;
     let offset;
-    if(Number.isNaN(parseInt(password.value))){
-        offset = password.value.length;
+    if(Number.isNaN(parseInt(password))){
+        offset = password.length;
     }else {
-        offset = parseInt(password.value);
+        offset = parseInt(password);
     }
     let message = document.getElementById('message-encode').value;
     let answerHTML = document.querySelector('#answer-encode');
@@ -21,17 +21,18 @@ function encode(event){
 }
 
 function decode(event){
-    let password = document.getElementById('offset-decode');
+    let password = document.getElementById('offset-decode').value;
     //para a senha funcionar com números e palavras:
     let offset;
-    if(Number.isNaN(parseInt(password.value))){
-        offset = password.value.length;
+    if(Number.isNaN(parseInt(password))){
+        offset = password.length;
     }else {
-        offset = parseInt(password.value);
+        offset = parseInt(password);
     }
 
     let message = document.getElementById('message-decode').value;
     let answerHTML = document.querySelector('#answer-decode');
+    //typeError
     try{
         let answer = cipher.decode(offset,message);
         answerHTML.textContent = answer;
