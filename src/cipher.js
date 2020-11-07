@@ -3,8 +3,9 @@ const cipher = {
         let encodeLetters;
         let encodeMessage = "";
 
-        if(typeof message !== 'string'|| typeof offset !== 'number') throw new TypeError("Você deve escrever um número/mensagem!");
-        
+        if(typeof message !== 'string'|| typeof offset !== 'number') throw new TypeError("A mensagem ou offset está em formato inválido");
+        if(offset === 0 || message === "") throw new TypeError("Você deve escrever um número/mensagem!");
+
         for(let i=0;i<message.length;i++){
             let encodeASC = message.charCodeAt(i);
         
@@ -36,6 +37,7 @@ const cipher = {
         let offsetMod = offset%26
         
         if(typeof message !== 'string'|| typeof offset !== 'number') throw new TypeError("Você deve escrever um número/mensagem!");
+        if(offset === 0 || message === "") throw new TypeError("Você deve escrever um número/mensagem!");
 
         for(let i=0;i<message.length;i++){
             let decodeASC = message.charCodeAt(i);
