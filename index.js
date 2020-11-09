@@ -3,6 +3,8 @@ import cipher from './cipher.js';
 function encode(event){
     let password = document.getElementById('offset-encode').value;
     let offset;
+    let message = document.getElementById('message-encode').value;
+    let answerHTML = document.querySelector('#answer-encode');
     if(password === "" || message === ""){
         return false;
     }
@@ -11,8 +13,6 @@ function encode(event){
     }else {
         offset = parseInt(password);
     }
-    let message = document.getElementById('message-encode').value;
-    let answerHTML = document.querySelector('#answer-encode');
     try{
         let answer = cipher.encode(offset,message);
         answerHTML.textContent = answer;
@@ -26,6 +26,8 @@ function encode(event){
 function decode(event){
     let password = document.getElementById('offset-decode').value;
     let offset;
+    let message = document.getElementById('message-decode').value;
+    let answerHTML = document.querySelector('#answer-decode');
     //para confirmar a validação do "required" no html
     if(password === "" || message === ""){
         return false;
@@ -36,9 +38,6 @@ function decode(event){
     }else {
         offset = parseInt(password);
     }
-
-    let message = document.getElementById('message-decode').value;
-    let answerHTML = document.querySelector('#answer-decode');
     //typeError
     try{
         let answer = cipher.decode(offset,message);
